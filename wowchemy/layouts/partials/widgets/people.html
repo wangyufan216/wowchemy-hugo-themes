@@ -31,7 +31,7 @@
   </div>
   {{end}}
 
-  {{ range $query }}
+  {{ range sort $query "Weight" }}
   {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Get link to user's profile page. */}}
   {{ $link := "" }}
